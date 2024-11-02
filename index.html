@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Meme Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#" onclick="showSection('memeSection')">Meme Generator</a></li>
+            <li><a href="#" onclick="showSection('supportSection')">Support</a></li>
+            <li><a href="#" onclick="showSection('contactSection')">Contact</a></li>
+        </ul>
+        <div class="settings">
+            <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+            <input type="color" id="customColorPicker" onchange="changeBackgroundColor(this.value)" title="Pick a background color">
+        </div>
+    </nav>
+
+    <main class="container" id="memeSection">
+        <h1>Ultimate Meme Generator</h1>
+        <div class="dropdown-container">
+            <label for="memeTemplate">Select Meme Template:</label>
+            <select id="memeTemplate" onmouseover="showPreview()" onmouseout="hidePreview()"></select>
+            <div id="memePreviewContainer">
+                <img id="memePreview" src="" alt="Meme Preview" style="display: none;">
+            </div>
+        </div>
+
+        <div class="text-inputs">
+            <input type="text" id="topText" placeholder="Top Text">
+            <input type="text" id="bottomText" placeholder="Bottom Text">
+        </div>
+        <button class="generate-button" onclick="generateMeme()">Generate Meme</button>
+
+        <div id="memeContainer">
+            <img id="memeImage" src="" alt="Your Meme">
+        </div>
+    </main>
+
+    <main class="container" id="supportSection" style="display: none;">
+        <h1>Support</h1>
+        <p>If you need any assistance, feel free to reach out:</p>
+        <p>Email: <a href="mailto:anshkabra.india@gmail.com">anshkabra.india@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/Anshkabra2012" target="_blank">Anshkabra2012</a></p>
+    </main>
+
+    <main class="container" id="contactSection" style="display: none;">
+        <h1>Contact</h1>
+        <p>Have questions or feedback? Get in touch!</p>
+        <p>Email: <a href="mailto:anshkabra.india@gmail.com">anshkabra.india@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/Anshkabra2012" target="_blank">Anshkabra2012</a></p>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
