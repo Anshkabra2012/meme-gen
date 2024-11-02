@@ -1,0 +1,154 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #ffcc00;
+}
+
+.settings {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.theme-toggle {
+    background-color: #ff4d4f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.theme-toggle:hover {
+    background-color: #e03c3e;
+}
+
+/* Container Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1e1e2f;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background-color: #2b2b3b;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    margin-top: 20px;
+    width: 90%;
+}
+
+/* Dropdown and Button Styles */
+.dropdown-container {
+    margin-bottom: 20px;
+}
+
+select, input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.generate-button {
+    background-color: #ff4d4f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.generate-button:hover {
+    background-color: #e03c3e;
+}
+
+/* Meme Image Styles */
+#memeContainer {
+    margin-top: 20px;
+}
+
+#memeImage {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #444;
+    border-radius: 10px;
+}
+
+/* Light Theme */
+.light-theme {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.light-theme .navbar {
+    background-color: #f0f0f0;
+    color: #000000;
+}
+
+.light-theme .navbar ul li a {
+    color: #000000;
+}
+
+.light-theme .container {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.light-theme .theme-toggle {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* Custom Color Picker */
+#customColorPicker {
+    border: none;
+    cursor: pointer;
+}
