@@ -1,55 +1,10 @@
-// Load memes from Imgflip API
-function loadMemes() {
-    const memeTemplate = document.getElementById('memeTemplate');
-    memeTemplate.innerHTML = ''; // Clear previous options
-
-    // Fetch meme templates from Imgflip
-    fetch('https://api.imgflip.com/get_memes')
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                data.data.memes.forEach(template => {
-                    const option = document.createElement('option');
-                    option.value = template.id;
-                    option.textContent = template.name;
-                    option.dataset.img = template.url; // Set image URL for preview
-                    memeTemplate.appendChild(option);
-                });
-            } else {
-                alert('Failed to load meme templates from Imgflip.');
-            }
-        })
-        .catch(error => {
-            console.error('Error fetching meme templates:', error);
-            alert('Failed to load meme templates. Check the console for details.');
-        });
-}
-
-// Show preview of the meme template
-function showPreview() {
-    const memeTemplate = document.getElementById('memeTemplate');
-    const memePreview = document.getElementById('memePreview');
-    const selectedOption = memeTemplate.options[memeTemplate.selectedIndex];
-
-    if (selectedOption && selectedOption.dataset.img) {
-        memePreview.src = selectedOption.dataset.img;
-        memePreview.style.display = 'block';
-    }
-}
-
-// Hide preview of the meme template
-function hidePreview() {
-    const memePreview = document.getElementById('memePreview');
-    memePreview.style.display = 'none';
-}
-
-// Generate meme using Imgflip API
 function generateMeme() {
     const templateId = document.getElementById('memeTemplate').value;
     const topText = document.getElementById('topText').value;
     const bottomText = document.getElementById('bottomText').value;
-    const username = 'AnshKabra1';
-    const password = 'Kabraann77';
+
+    const username = 'YOUR_USERNAME';
+    const password = 'YOUR_PASSWORD';
     const url = 'https://api.imgflip.com/caption_image';
 
     const formData = new URLSearchParams();
@@ -78,7 +33,6 @@ function generateMeme() {
     });
 }
 
-// Launch confetti animation
 function launchConfetti() {
     const duration = 2 * 1000;
     const end = Date.now() + duration;
@@ -103,5 +57,19 @@ function launchConfetti() {
     })();
 }
 
-// Load memes on page load
-document.addEventListener('DOMContentLoaded', loadMemes);
+function toggleTheme() {
+    document.body.classList.toggle('light-theme');
+}
+
+function changeBackgroundColor(color) {
+    document.body.style.backgroundColor = color;
+}
+
+function showSection(sectionId) {
+    document.getElementById('memeSection').style.display = 'none';
+    document.getElementById('supportSection').style.display = 'none';
+    document.getElementById('contactSection').style.display = 'none';
+
+    document.getElementById(sectionId).style.display = 'block';
+}
+s
