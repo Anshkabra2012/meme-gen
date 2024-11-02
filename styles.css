@@ -38,12 +38,6 @@
     color: #ffcc00;
 }
 
-.settings {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
 .theme-toggle {
     background-color: #ff4d4f;
     color: white;
@@ -66,8 +60,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100vh;
     margin: 0;
-    min-height: 100vh;
 }
 
 .container {
@@ -78,51 +72,9 @@ body {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     max-width: 800px;
     margin-top: 20px;
-    width: 90%;
 }
 
-/* Dropdown and Button Styles */
-.dropdown-container {
-    margin-bottom: 20px;
-}
-
-select, input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: none;
-    outline: none;
-}
-
-.generate-button {
-    background-color: #ff4d4f;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.generate-button:hover {
-    background-color: #e03c3e;
-}
-
-/* Meme Image Styles */
-#memeContainer {
-    margin-top: 20px;
-}
-
-#memeImage {
-    max-width: 100%;
-    height: auto;
-    border: 2px solid #444;
-    border-radius: 10px;
-}
-
-/* Light Theme */
+/* Dark and Light Theme */
 .light-theme {
     background-color: #ffffff;
     color: #000000;
@@ -149,6 +101,34 @@ select, input {
 
 /* Custom Color Picker */
 #customColorPicker {
+    margin-left: 10px;
     border: none;
+    padding: 5px;
     cursor: pointer;
+}
+
+/* Dropdown and Button Styles */
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+select, input, button {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    background-color: #ff4d4f;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e03c3e;
 }
