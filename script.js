@@ -3,8 +3,8 @@ function generateMeme() {
     const topText = document.getElementById('topText').value;
     const bottomText = document.getElementById('bottomText').value;
 
-    const username = 'YOUR_USERNAME';
-    const password = 'YOUR_PASSWORD';
+    const username = 'AnshKabra1';
+    const password = 'Kabraann77';
     const url = 'https://api.imgflip.com/caption_image';
 
     const formData = new URLSearchParams();
